@@ -12,9 +12,9 @@ This code is for accessing Face Detection Python Application built using haarcsc
 
 Requirements
 
-<code>   pip install --user opencv-python
-    pip install opencv-contrib
-    pip install flask
+<code>    pip install --user opencv-python </code> <br>
+<code>    pip install opencv-contrib </code> <br>
+<code>    pip install flask </code> <br>
 </code>
 
 <p>To run this code navigate to the repository, and run the following command on the terminal/cmd - 
