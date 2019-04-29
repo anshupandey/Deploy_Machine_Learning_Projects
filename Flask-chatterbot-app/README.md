@@ -12,10 +12,10 @@ This code is for creating a chatbot application using flask and accessing the ap
 
 Requirements
 
-<code>   pip install --user --upgrade PyYAML
-    pip install chatterbot
-    pip install flask
-    pip install chatterbot-corpus
+<code>   pip install --user --upgrade PyYAML <br>
+    pip install chatterbot<br>
+    pip install flask<br>
+    pip install chatterbot-corpus<br>
 </code>
 
 <p>To run this code navigate to the repository, and run the following command on the terminal/cmd - 
