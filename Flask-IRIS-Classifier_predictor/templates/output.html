@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1><center>Welcome to the Machine Learning Dashboard</center></h1>
+        <hr><br><br>
+        <center>
+            <hr>
+            <h3> IRIS Prediction Model </h3>
+            <hr><br><br>
+            <table border=2>
+                {% for key,value in output.items() %}
+                <tr>
+                    <th>{{key}}</th>
+                    <td>{{value}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <br><br>
+            <a href="http://127.0.0.1:5000/"><button>Go Back</button></a>
+            <hr>
+            Designed By Kaizen
+            <hr>
+        </center>
+    </body>
+</html>
