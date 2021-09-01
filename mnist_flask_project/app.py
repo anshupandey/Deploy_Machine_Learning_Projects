@@ -9,11 +9,12 @@ from flask import Flask,request,jsonify
 import os
 import cv2
 from train_mnist import train_mnist
-from keras import models
+from tensorflow.keras import models
+from tensorflow.keras.preprocessing import image
 import numpy
 import tensorflow as tf
-global graph
-graph = tf.get_default_graph()
+#global graph
+#graph = tf.get_default_graph()
 app = Flask(__name__)
 
 
@@ -29,9 +30,9 @@ model = load_model()
 def main():
     data = request.files.get('image','')
     data.save('img.jpg')
-    img = cv2.imread('img.jpg',0)
-    with graph.as_default():
-        output = model.predict_classes(img.reshape(1,28,28,1))
+    img = image.img_to_array(image.load_img('img.jpg',target_size=(28,28),grayscale=True))
+    #with graph.as_default():
+    output = model.predict_classes(img.reshape(1,28,28,1))
     return jsonify(str(output[0]))
 
 if __name__ == "__main__":
