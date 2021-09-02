@@ -5,9 +5,9 @@ Created on Wed May  1 10:25:47 2019
 @author: anshu
 """
 
-from keras.datasets import mnist
-from keras import models,layers
-from keras.utils import to_categorical
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras import models,layers
+from tensorflow.keras.utils import to_categorical
 
 class train_mnist:
     def __init__(self,epochs=10,batch_size=1000,validation_split=0.1):
