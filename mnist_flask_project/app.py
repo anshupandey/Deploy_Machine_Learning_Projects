@@ -29,11 +29,13 @@ model = load_model()
 @app.route('/',methods=["GET","POST"])
 def main():
     data = request.files.get('image','')
+    print(data)
     data.save('img.jpg')
     img = image.img_to_array(image.load_img('img.jpg',target_size=(28,28),grayscale=True))
     #with graph.as_default():
-    output = model.predict_classes(img.reshape(1,28,28,1))
-    return jsonify(str(output[0]))
+    output = model.predict(img.reshape(1,28,28,1))
+    output = numpy.argmax(output)
+    return jsonify(str(output))
 
 if __name__ == "__main__":
     app.run(debug=True)
